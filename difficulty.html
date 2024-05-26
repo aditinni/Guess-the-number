@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <title>Guess The Number</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        font-family: 'Comic Neue', cursive;
+        
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+    h1{
+        color: white;
+    }
+    button{
+        padding: 14px 19px;
+        border: 2px solid transparent;
+        border-radius: 20px;
+        font-weight: bolder;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+
+    }
+    #easy{
+        background-color: limegreen;
+        box-shadow: 2px 2px 20px limegreen;
+    }
+    #med{
+        background-color: darkorange;
+        box-shadow: 2px 2px 20px darkorange;
+    }
+    #hard{
+        background-color: red;
+        box-shadow: 2px 2px 20px red;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <h1>Guess The Number</h1>
+        <button id="easy"><a href="#" id="elink">Easy</a></button>
+        <button id="med"><a href="#"id="mlink">Medium</a></button>
+        <button id="hard"><a href="#" id="hlink">Hard</a></button>
+    </div>
+
+    <script>
+        let game= new Audio("game.mp3")
+        let easy = document.getElementById("easy")
+        let med = document.getElementById("med")
+        let hard = document.getElementById("hard")
+        let elink = document.getElementById("elink")
+         let mlink = document.getElementById("mlink")
+         let hlink = document.getElementById("hlink")
+         
+
+        document.addEventListener("DOMContentLoaded", () => {
+            game.play();
+        });
+        
+        easy.addEventListener("click",()=>{
+            elink.href = "http://127.0.0.1:5500/Number_GameEasy.html"
+
+        })
+        med.addEventListener("click",()=>{
+            mlink.href="http://127.0.0.1:5500/Number_GameMed.html"
+
+        })
+        hard.addEventListener("click",()=>{
+            hlink.href="http://127.0.0.1:5500/Number_GameHard.html"
+        })
+    </script>
+    
+</body>
+</html>
